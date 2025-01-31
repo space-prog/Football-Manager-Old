@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    font-size: .9px;
+}
+
 body {
     background-color: #8dc63f;
     font-family: "Arial";
@@ -16,51 +20,67 @@ ul {
     list-style: none;
 }
 
-.field {
+aside {
     width: 100%;
 }
 
+.field {
+    height: 200rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: 75%;
+    vertical-align: bottom;
+}
+
 .wrapper {
-    max-width: 961px;
+    max-width: 961rem;
     margin: 0 auto;
     background-color: #fff;
-    padding: 0 15px;
+    padding: 0 15rem;
+}
+
+.logo a img {
+    width: 100rem;
+    height: 100rem;
 }
 
 .logo {
-    align-items: center;
-    column-gap: 33px;
+    column-gap: 33rem;
 }
 
 .logo b {
     display: block;
-    font-size: 44px;
+    font-size: 44rem;
 }
 
 .logo p,
 .contacts a,
 .main-text h1 {
-    font-size: 22px;
+    font-size: 22rem;
     color: #39930d;
 }
 
 .logo i,
 .contacts i {
     color: #5a5a5a;
-    font-size: 14px;
+    font-size: 14rem;
 }
 
 .flex-between {
     display: flex;
-    justify-content: space-between;
+    row-gap: 20rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .header {
-    padding: 25px 0px;
+    text-align: center;
+    padding: 25rem 0rem;
+    column-gap: 33rem;
 }
 
 .contacts {
-    text-align: right;
+    text-align: center;
 }
 
 .contacts a {
@@ -68,44 +88,45 @@ ul {
 }
 
 .main {
-    padding: 25px 0 25px;
+    padding: 25rem 0 25rem;
+    flex-wrap: wrap-reverse;
 }
 
 .main-text h1,
 .main-text p {
-    margin-bottom: 17px;
+    margin-bottom: 17rem;
 }
 
 .main-text h1 {
-    font-size: 24px;
+    font-size: 24rem;
 }
 
 .main-text p {
-    max-width: 599px;
-    font-size: 14px;
+    max-width: 599rem;
+    font-size: 14rem;
     line-height: 1.5em;
     color: #343434;
 }
 
 .navigation {
-    min-width: 300px;
+    min-width: 300rem;
 }
 
 .navigation p {
-    padding: 12px 20px 12px;
-    font-size: 18px;
+    padding: 12rem 20rem 12rem;
+    font-size: 18rem;
     color: #fff;
     background-color: #39930d;
 }
 
 .navigation ul {
-    padding: 20px;
+    padding: 20rem;
 }
 
 .navigation a {
     position: relative;
     display: inline-block;
-    font-size: 14px;
+    font-size: 14rem;
     line-height: 2.1em;
     text-transform: uppercase;
     color: #39930d;
@@ -133,10 +154,46 @@ ul {
 }
 
 .footer {
-    margin: 0 -15px;
-    padding: 17px 16px 14px;
-    font-size: 14px;
+    margin: 0 -15rem;
+    padding: 17rem 16rem 14rem;
+    font-size: 14rem;
     color: #fff;
     background-color: #39930d;
 }
 
+@media screen and (min-width: 768px) {
+    .flex-between {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .contacts {
+        text-align: right;
+    }
+    aside {
+        max-width: 300rem;
+    }
+}
+
+@media screen and (min-width: 390px) {
+    .header {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 623px) {
+    .contacts {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 1.2px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 2px;
+    }
+}
